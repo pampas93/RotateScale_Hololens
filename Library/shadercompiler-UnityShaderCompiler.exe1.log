@@ -356,3 +356,100 @@ Cmd: compileSnippet
   api=8 type=0 insize=4714 outsize=1022 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_MOBILE UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA ok=1
 Cmd: compileSnippet
   api=8 type=1 insize=4714 outsize=2214 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_MOBILE UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=1874 outsize=3284 ok=1
+Cmd: disassembleShader
+  api=4 insize=2834 outsize=4628 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1097 outsize=2726 kw=DIRECTIONAL _EMISSION VERTEXLIGHT_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=2726 outsize=4468 ok=1
+Cmd: disassembleShader
+  api=4 insize=6794 outsize=9600 ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1097 outsize=7298 kw=DIRECTIONAL SHADOWS_SCREEN _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP UNITY_HARDWARE_TIER2 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=7298 outsize=10373 ok=1
+Cmd: disassembleShader
+  api=4 insize=1670 outsize=3054 ok=1
+Cmd: disassembleShader
+  api=4 insize=1670 outsize=3054 ok=1
+Cmd: disassembleShader
+  api=4 insize=1778 outsize=3214 ok=1
+Cmd: disassembleShader
+  api=4 insize=1670 outsize=3054 ok=1
+Cmd: disassembleShader
+  api=4 insize=1670 outsize=3054 ok=1
+Cmd: disassembleShader
+  api=4 insize=3942 outsize=5785 ok=1
+Cmd: disassembleShader
+  api=4 insize=3410 outsize=5448 ok=1
+Cmd: disassembleShader
+  api=4 insize=3938 outsize=5762 ok=1
+Cmd: disassembleShader
+  api=4 insize=4930 outsize=7182 ok=1
+Cmd: disassembleShader
+  api=4 insize=1414 outsize=2269 ok=1
+Cmd: disassembleShader
+  api=4 insize=350 outsize=907 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1062 outsize=1806 kw=_EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 UNITY_HARDWARE_TIER1 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=1806 outsize=3163 ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1062 outsize=2618 kw=_EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP UNITY_HARDWARE_TIER2 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=2618 outsize=4649 ok=1
+Cmd: disassembleShader
+  api=8 insize=3438 outsize=6732 ok=1
+Cmd: disassembleShader
+  api=4 insize=3050 outsize=4909 ok=1
+Cmd: disassembleShader
+  api=4 insize=2834 outsize=4628 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1115 outsize=1982 kw=DIRECTIONAL SHADOWS_SCREEN _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP UNITY_HARDWARE_TIER2 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=1982 outsize=3444 ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=1115 outsize=4630 kw=DIRECTIONAL _EMISSION VERTEXLIGHT_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_HARDWARE_TIER1 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=8 insize=4630 outsize=8588 ok=1
+Cmd: disassembleShader
+  api=4 insize=4794 outsize=7327 ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1115 outsize=2862 kw=DIRECTIONAL _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP UNITY_HARDWARE_TIER2 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=2862 outsize=4794 ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1115 outsize=7298 kw=DIRECTIONAL SHADOWS_SCREEN _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: disassembleShader
+  api=4 insize=7298 outsize=10373 ok=1
+Cmd: disassembleShader
+  api=4 insize=1822 outsize=3232 ok=1
+Cmd: disassembleShader
+  api=8 insize=2554 outsize=5309 ok=1
+Cmd: disassembleShader
+  api=4 insize=1822 outsize=3232 ok=1
+Cmd: disassembleShader
+  api=8 insize=2642 outsize=5423 ok=1
+Cmd: disassembleShader
+  api=4 insize=1822 outsize=3232 ok=1
+Cmd: disassembleShader
+  api=4 insize=1778 outsize=3214 ok=1
+Cmd: disassembleShader
+  api=4 insize=2218 outsize=3862 ok=1
+Cmd: disassembleShader
+  api=8 insize=1958 outsize=4350 ok=1
+Cmd: disassembleShader
+  api=4 insize=2310 outsize=4027 ok=1
+Cmd: disassembleShader
+  api=8 insize=2350 outsize=5117 ok=1
+Cmd: disassembleShader
+  api=4 insize=3938 outsize=5762 ok=1
+Cmd: disassembleShader
+  api=4 insize=4174 outsize=6100 ok=1
+Cmd: disassembleShader
+  api=4 insize=350 outsize=907 ok=1
+Unhandled exception: Protocol error - failed to read correct magic number
+
+Quitting shader compiler process
