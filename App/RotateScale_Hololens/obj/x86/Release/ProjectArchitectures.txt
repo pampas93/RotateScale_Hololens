@@ -1,0 +1,1 @@
+D:\Unity Projects\RotateScale_Hololens\App\RotateScale_Hololens\RotateScale_Hololens.csproj;x86
