@@ -6,7 +6,7 @@ using System;
 
 public class zAxisRotate : MonoBehaviour,IInputClickHandler {
 
-    bool selected = false;
+    //public bool selected = false;
     private Shader x;
     private Shader defaultShader;
     private HandRotate rotateScript;
@@ -14,21 +14,19 @@ public class zAxisRotate : MonoBehaviour,IInputClickHandler {
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
-        if (!selected)
+        if (rotateScript.rotateAxis != 'Z')
         {
-            this.GetComponent<Renderer>().material.shader = x;
-            selected = true;
-            Debug.Log("Z is selected");
+            Debug.Log("Z switched on");
             rotateScript.rotateAxis = 'Z';
+            this.GetComponent<Renderer>().material.shader = x;
         }
         else
         {
-            this.GetComponent<Renderer>().material.shader = defaultShader;
-            selected = false;
-            Debug.Log("Z is deselected");
+            Debug.Log("Z switched off");
             rotateScript.rotateAxis = ' ';
+            this.GetComponent<Renderer>().material.shader = defaultShader;
         }
-        
+
     }
 
     // Use this for initialization
@@ -46,7 +44,14 @@ public class zAxisRotate : MonoBehaviour,IInputClickHandler {
     // Update is called once per frame
     void Update()
     {
-
+        if (rotateScript.rotateAxis == 'Z')
+        {
+            this.GetComponent<Renderer>().material.shader = x;
+        }
+        else
+        {
+            this.GetComponent<Renderer>().material.shader = defaultShader;
+        }
 
     }
 }

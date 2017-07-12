@@ -6,27 +6,40 @@ using System;
 
 public class yAxisRotate : MonoBehaviour, IInputClickHandler {
 
-    bool selected = false;
+    //public bool selected = false;
     private Shader x;
     private Shader defaultShader;
     private HandRotate rotateScript;
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
-        if (!selected)
+        Debug.Log("Y axis clicked");
+        if(rotateScript.rotateAxis != 'Y')
         {
-            this.GetComponent<Renderer>().material.shader = x;
-            selected = true;
-            Debug.Log("Y is selected");
+            Debug.Log("Y switched on");
             rotateScript.rotateAxis = 'Y';
+            this.GetComponent<Renderer>().material.shader = x;
         }
         else
         {
-            this.GetComponent<Renderer>().material.shader = defaultShader;
-            selected = false;
-            Debug.Log("Y is deselected");
+            Debug.Log("Y switched off");
             rotateScript.rotateAxis = ' ';
+            this.GetComponent<Renderer>().material.shader = defaultShader;
         }
+        //if (!selected)
+        //{
+        //    //this.GetComponent<Renderer>().material.shader = x;
+        //    //selected = true;
+        //    //Debug.Log("Y is selected");
+        //    rotateScript.rotateAxis = 'Y';
+        //}
+        //else
+        //{
+        //    //this.GetComponent<Renderer>().material.shader = defaultShader;
+        //    //selected = false;
+        //    //Debug.Log("Y is deselected");
+        //    rotateScript.rotateAxis = ' ';
+        //}
         
     }
 
@@ -46,7 +59,13 @@ public class yAxisRotate : MonoBehaviour, IInputClickHandler {
     // Update is called once per frame
     void Update()
     {
-
-
+        if (rotateScript.rotateAxis == 'Y')
+        {
+            this.GetComponent<Renderer>().material.shader = x;
+        }
+        else
+        {
+            this.GetComponent<Renderer>().material.shader = defaultShader;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System;
 
 public class xAxisRotate : MonoBehaviour,IInputClickHandler {
 
-    bool selected = false;
+    //public bool selected = false;
     private Shader x;
     private Shader defaultShader;
     private HandRotate rotateScript;
@@ -15,19 +15,17 @@ public class xAxisRotate : MonoBehaviour,IInputClickHandler {
     public void OnInputClicked(InputClickedEventData eventData)
     {
         Debug.Log("Click function");
-        if (!selected)
+        if (rotateScript.rotateAxis != 'X')
         {
-            this.GetComponent<Renderer>().material.shader = x;
-            Debug.Log("X is deselected");
-            selected = true;
+            Debug.Log("X switched on");
             rotateScript.rotateAxis = 'X';
+            this.GetComponent<Renderer>().material.shader = x;
         }
         else
         {
-            this.GetComponent<Renderer>().material.shader = defaultShader;
-            selected = false;
-            Debug.Log("X is deselected");
+            Debug.Log("X switched off");
             rotateScript.rotateAxis = ' ';
+            this.GetComponent<Renderer>().material.shader = defaultShader;
         }
         //throw new NotImplementedException();
     }
@@ -45,6 +43,15 @@ public class xAxisRotate : MonoBehaviour,IInputClickHandler {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(rotateScript.rotateAxis == 'X')
+        {
+            this.GetComponent<Renderer>().material.shader = x;
+        }
+        else
+        {
+            this.GetComponent<Renderer>().material.shader = defaultShader;
+        }
 
 
     }
