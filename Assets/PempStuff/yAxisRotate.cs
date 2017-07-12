@@ -9,7 +9,7 @@ public class yAxisRotate : MonoBehaviour, IInputClickHandler {
     bool selected = false;
     private Shader x;
     private Shader defaultShader;
-
+    private HandRotate rotateScript;
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
@@ -18,12 +18,14 @@ public class yAxisRotate : MonoBehaviour, IInputClickHandler {
             this.GetComponent<Renderer>().material.shader = x;
             selected = true;
             Debug.Log("Y is selected");
+            rotateScript.rotateAxis = 'Y';
         }
         else
         {
             this.GetComponent<Renderer>().material.shader = defaultShader;
             selected = false;
             Debug.Log("Y is deselected");
+            rotateScript.rotateAxis = ' ';
         }
         
     }
@@ -34,6 +36,10 @@ public class yAxisRotate : MonoBehaviour, IInputClickHandler {
 
         defaultShader = this.GetComponent<Renderer>().material.shader;
         x = Shader.Find("Legacy Shaders/Bumped Diffuse");
+
+        GameObject grandParent = this.gameObject.transform.parent.gameObject.transform.parent.gameObject;
+        //Debug.Log(grandParent);
+        rotateScript = grandParent.GetComponent<HandRotate>();
 
     }
 

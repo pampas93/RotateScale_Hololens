@@ -9,6 +9,7 @@ public class zAxisRotate : MonoBehaviour,IInputClickHandler {
     bool selected = false;
     private Shader x;
     private Shader defaultShader;
+    private HandRotate rotateScript;
 
 
     public void OnInputClicked(InputClickedEventData eventData)
@@ -18,12 +19,14 @@ public class zAxisRotate : MonoBehaviour,IInputClickHandler {
             this.GetComponent<Renderer>().material.shader = x;
             selected = true;
             Debug.Log("Z is selected");
+            rotateScript.rotateAxis = 'Z';
         }
         else
         {
             this.GetComponent<Renderer>().material.shader = defaultShader;
             selected = false;
             Debug.Log("Z is deselected");
+            rotateScript.rotateAxis = ' ';
         }
         
     }
@@ -34,6 +37,9 @@ public class zAxisRotate : MonoBehaviour,IInputClickHandler {
 
         defaultShader = this.GetComponent<Renderer>().material.shader;
         x = Shader.Find("Legacy Shaders/Bumped Diffuse");
+        GameObject grandParent = this.gameObject.transform.parent.gameObject.transform.parent.gameObject;
+        //Debug.Log(grandParent);
+        rotateScript = grandParent.GetComponent<HandRotate>();
 
     }
 
