@@ -66,7 +66,7 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
 
     void Rotate(Vector3 rotation)
     {
-        Debug.Log(" X = " + rotation.x + "... Y = " + rotation.y + "... Z = " + rotation.z);
+        //Debug.Log(" X = " + rotation.x + "... Y = " + rotation.y + "... Z = " + rotation.z);
         switch (rotateAxis)
         {
             case 'X':

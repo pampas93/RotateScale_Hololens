@@ -17,13 +17,15 @@ public class yAxisRotate : MonoBehaviour, IInputClickHandler {
         {
             this.GetComponent<Renderer>().material.shader = x;
             selected = true;
+            Debug.Log("Y is selected");
         }
         else
         {
             this.GetComponent<Renderer>().material.shader = defaultShader;
             selected = false;
+            Debug.Log("Y is deselected");
         }
-        throw new NotImplementedException();
+        
     }
 
     // Use this for initialization

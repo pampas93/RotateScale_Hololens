@@ -7,6 +7,7 @@ public class menuPosition : MonoBehaviour {
 
     private GameObject parentObj;
     private Renderer r;
+    private float menuHeight = 0.2f;
 
     void Start () {
 
@@ -17,17 +18,18 @@ public class menuPosition : MonoBehaviour {
 	
 	void Update () {
 
-        Vector3 menuPosition;
+        /*Vector3 menuPosition;
 
         var xx = r.bounds.extents.x / 2;
 
         float t = parentObj.transform.localScale.y / 2;
-        Debug.Log(t);
+        //Debug.Log(t);
+
         //menuPosition = new Vector3(r.bounds.center.x + xx, r.bounds.center.y, r.bounds.center.z);
-        menuPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y + t + 0.2f, parentObj.transform.position.z);
+        menuPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y + t + menuHeight, parentObj.transform.position.z);
 
         //Debug.Log(menuPosition);
-        transform.position = menuPosition;
+        transform.position = menuPosition;*/
 
         transform.LookAt(Camera.main.transform);
 

@@ -17,12 +17,14 @@ public class xAxisRotate : MonoBehaviour,IInputClickHandler {
         if (!selected)
         {
             this.GetComponent<Renderer>().material.shader = x;
+            Debug.Log("X is deselected");
             selected = true;
         }
         else
         {
             this.GetComponent<Renderer>().material.shader = defaultShader;
             selected = false;
+            Debug.Log("X is deselected");
         }
         //throw new NotImplementedException();
     }

@@ -17,13 +17,15 @@ public class zAxisRotate : MonoBehaviour,IInputClickHandler {
         {
             this.GetComponent<Renderer>().material.shader = x;
             selected = true;
+            Debug.Log("Z is selected");
         }
         else
         {
             this.GetComponent<Renderer>().material.shader = defaultShader;
             selected = false;
+            Debug.Log("Z is deselected");
         }
-        throw new NotImplementedException();
+        
     }
 
     // Use this for initialization
