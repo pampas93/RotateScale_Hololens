@@ -8,7 +8,7 @@ public class HandResize : MonoBehaviour, IManipulationHandler
     float ResizeSpeedFactor = 1.5f;
 
     [SerializeField]
-    float ResizeScaleFactor = 1.0f;
+    float ResizeScaleFactor = 5.0f;
 
     [Tooltip("When warp is checked, we allow resizing of all three scale axes - otherwise we scale each axis by the same amount.")]
     [SerializeField]

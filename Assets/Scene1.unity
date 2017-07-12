@@ -321,13 +321,14 @@ GameObject:
   - component: {fileID: 508757694}
   - component: {fileID: 508757693}
   - component: {fileID: 508757692}
+  - component: {fileID: 508757697}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &508757692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,8 +342,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotateSpeed: 25
   RotationFactor: 50
-  rotateAxis: 89
-  rotatingEnabled: 1
+  rotateAxis: 32
+  rotatingEnabled: 0
 --- !u!23 &508757693
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -409,6 +410,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &508757697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 508757691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70b07de35eb13d4885d837d99af25ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResizeSpeedFactor: 1.5
+  ResizeScaleFactor: 5
+  AllowResizeWarp: 0
+  MinScale: 0.5
+  MaxScale: 4
+  resizingEnabled: 1
 --- !u!1 &633865904
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &633865905
 Transform:
   m_ObjectHideFlags: 0
@@ -465,13 +483,14 @@ GameObject:
   - component: {fileID: 656750728}
   - component: {fileID: 656750727}
   - component: {fileID: 656750726}
+  - component: {fileID: 656750731}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &656750726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,7 +505,7 @@ MonoBehaviour:
   RotateSpeed: 25
   RotationFactor: 50
   rotateAxis: 32
-  rotatingEnabled: 1
+  rotatingEnabled: 0
 --- !u!23 &656750727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -552,6 +571,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656750731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656750725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70b07de35eb13d4885d837d99af25ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResizeSpeedFactor: 1.5
+  ResizeScaleFactor: 1
+  AllowResizeWarp: 0
+  MinScale: 0.5
+  MaxScale: 4
+  resizingEnabled: 1
 --- !u!1 &682490824
 GameObject:
   m_ObjectHideFlags: 0

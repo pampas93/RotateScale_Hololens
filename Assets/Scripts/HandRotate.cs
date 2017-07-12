@@ -13,7 +13,7 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
 
     public char rotateAxis = ' ';
 
-    //private GameObject child;
+    private GameObject child;
     //private xAxisRotate xObj;
     //private yAxisRotate yObj;
     //private zAxisRotate zObj;
@@ -24,7 +24,7 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
     {
         Debug.Log("Application rotation script started");
 
-        //child = this.transform.GetChild(0).gameObject;
+        child = this.transform.GetChild(0).gameObject;
 
         //xObj = child.GetComponentInChildren<xAxisRotate>();
         //yObj = child.GetComponentInChildren<yAxisRotate>();
@@ -40,6 +40,16 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
     public void SetRotating(bool enabled)
     {
         rotatingEnabled = enabled;
+    }
+
+    private void Update()
+    {
+        if (rotatingEnabled)
+            child.SetActive(true);
+        else
+            child.SetActive(false);
+           
+
     }
 
     public void OnManipulationStarted(ManipulationEventData eventData)
