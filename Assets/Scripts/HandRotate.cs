@@ -19,6 +19,7 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
     //private zAxisRotate zObj;
 
     Vector3 lastRotation;
+    Vector3 scale;
 
     public void Start()
     {
@@ -59,6 +60,7 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
         //Pushing this gameObject into the Modal Input Stack
         InputManager.Instance.PushModalInputHandler(gameObject);
         lastRotation = transform.rotation.eulerAngles;
+        scale = transform.localScale;
     }
 
     public void OnManipulationUpdated(ManipulationEventData eventData)
@@ -85,6 +87,7 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
         //Debug.Log(transform.rotation.x + "____" + transform.rotation.y + "_____" + transform.rotation.z);
         InputManager.Instance.PopModalInputHandler();
         lastRotation = transform.rotation.eulerAngles;
+        transform.localScale = scale;
     }
 
     public void OnManipulationCanceled(ManipulationEventData eventData)
@@ -105,14 +108,14 @@ public class HandRotate : MonoBehaviour, IManipulationHandler
                 //zObj.selected = false;
                 break;
             case 'Y':
-                transform.rotation = Quaternion.Euler(lastRotation.x,( lastRotation.y + rotation.y)*RotateSpeed,lastRotation.z);
+                transform.rotation = Quaternion.Euler(lastRotation.x,( lastRotation.y - rotation.y)*RotateSpeed,lastRotation.z);
                 //transform.Rotate(Vector3.down * rotation.y);
                 //yObj.selected = true;
                 //xObj.selected = false;
                 //zObj.selected = false;
                 break;
             case 'Z':
-                transform.rotation = Quaternion.Euler(lastRotation.x, lastRotation.y, (lastRotation.z + rotation.z)*RotateSpeed) ;
+                transform.rotation = Quaternion.Euler(lastRotation.x, lastRotation.y, (lastRotation.z + rotation.z)*RotateSpeed);
                 //transform.Rotate(Vector3.forward * rotation.z);
                 //zObj.selected = true;
                 //yObj.selected = false;

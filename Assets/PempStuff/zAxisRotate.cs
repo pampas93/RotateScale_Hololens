@@ -34,7 +34,7 @@ public class zAxisRotate : MonoBehaviour,IInputClickHandler {
     {
 
         defaultShader = this.GetComponent<Renderer>().material.shader;
-        x = Shader.Find("Legacy Shaders/Bumped Diffuse");
+        x = Shader.Find("Legacy Shaders/Self-Illumin/Bumped Diffuse");
         GameObject grandParent = this.gameObject.transform.parent.gameObject.transform.parent.gameObject;
         //Debug.Log(grandParent);
         rotateScript = grandParent.GetComponent<HandRotate>();
