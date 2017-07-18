@@ -7,13 +7,13 @@ using System;
 public class HandDragging : MonoBehaviour, IManipulationHandler
 {
     [SerializeField]
-    float DragSpeed = 1.5f;
+    float DragSpeed = 5f;
 
     [SerializeField]
-    float DragScale = 1.5f;
+    float DragScale = 5f;
 
     [SerializeField]
-    float MaxDragDistance = 3f;
+    float MaxDragDistance = 50f;
         
     Vector3 lastPosition;
 
