@@ -329,6 +329,8 @@
     <Compile Include="Assets\Scripts\HandDragging.cs" />
     <Compile Include="Assets\Scripts\HandResize.cs" />
     <Compile Include="Assets\Scripts\HandRotate.cs" />
+    <Compile Include="Assets\Scripts\TransformMenu.cs" />
+    <Compile Include="Assets\Scripts\TransformOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />
