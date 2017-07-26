@@ -321,6 +321,7 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\VectorRollingStatistics.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\WorldAnchorManager.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Shaders\FastConfigurable\Scripts\CalibrationSpace.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\PempStuff\menuPosition.cs" />
     <Compile Include="Assets\PempStuff\xAxisRotate.cs" />
     <Compile Include="Assets\PempStuff\yAxisRotate.cs" />

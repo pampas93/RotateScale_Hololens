@@ -37,8 +37,8 @@ public class menuPosition : MonoBehaviour {
 
         //Debug.Log(r.bounds.size.y);
 
-        //menuPosition = new Vector3(r.bounds.center.x + xx, r.bounds.center.y, r.bounds.center.z);
-        menuPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y + xx + menuHeight, parentObj.transform.position.z);
+        menuPosition = new Vector3(r.bounds.center.x, r.bounds.center.y + xx + menuHeight, r.bounds.center.z);
+        //menuPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y + xx + menuHeight, parentObj.transform.position.z);
 
         //Debug.Log(menuPosition);
         transform.position = menuPosition;
