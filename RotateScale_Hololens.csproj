@@ -321,16 +321,19 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\VectorRollingStatistics.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\WorldAnchorManager.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Shaders\FastConfigurable\Scripts\CalibrationSpace.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
-    <Compile Include="Assets\PempStuff\menuPosition.cs" />
-    <Compile Include="Assets\PempStuff\xAxisRotate.cs" />
-    <Compile Include="Assets\PempStuff\yAxisRotate.cs" />
-    <Compile Include="Assets\PempStuff\zAxisRotate.cs" />
+    <Compile Include="Assets\Scripts\CreateReferencePoints.cs" />
+    <Compile Include="Assets\Scripts\GameObjectManager.cs" />
     <Compile Include="Assets\Scripts\HandDragging.cs" />
     <Compile Include="Assets\Scripts\HandResize.cs" />
     <Compile Include="Assets\Scripts\HandRotate.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\TransformMenu.cs" />
     <Compile Include="Assets\Scripts\TransformOptions.cs" />
+    <Compile Include="Assets\Scripts\clickToSelect.cs" />
+    <Compile Include="Assets\Scripts\menuPosition.cs" />
+    <Compile Include="Assets\Scripts\xAxisRotate.cs" />
+    <Compile Include="Assets\Scripts\yAxisRotate.cs" />
+    <Compile Include="Assets\Scripts\zAxisRotate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />
