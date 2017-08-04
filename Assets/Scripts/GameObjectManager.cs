@@ -51,6 +51,7 @@ public class GameObjectManager : MonoBehaviour {
 
     private void CreateBox(GameObject obj)
     {
+        float gap = 0.25f;
         var parentObj = new GameObject();
         parentObj.name = "Parent Temporary Object";
         obj.transform.SetParent(parentObj.transform);
@@ -61,7 +62,7 @@ public class GameObjectManager : MonoBehaviour {
         GameObject mesh = GameObject.CreatePrimitive(PrimitiveType.Cube);
         mesh.name = "Outer Box";
         mesh.transform.position = center;
-        mesh.transform.localScale = size;
+        mesh.transform.localScale = new Vector3(size.x + gap, size.y + gap, size.z + gap);
         mesh.GetComponent<Renderer>().material = boxMaterial;
         Destroy(mesh.GetComponent<BoxCollider>());              //Remove Box Collider from the outer box //obstructing when click
 
