@@ -327,8 +327,12 @@
     <Compile Include="Assets\Scripts\HandResize.cs" />
     <Compile Include="Assets\Scripts\HandRotate.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Scene2\MoveOption.cs" />
+    <Compile Include="Assets\Scripts\Scene2\ResetOption.cs" />
+    <Compile Include="Assets\Scripts\Scene2\RotateOption.cs" />
+    <Compile Include="Assets\Scripts\Scene2\ScaleOption.cs" />
+    <Compile Include="Assets\Scripts\Scene2\TapRecognizer.cs" />
     <Compile Include="Assets\Scripts\TransformMenu.cs" />
-    <Compile Include="Assets\Scripts\TransformOptions.cs" />
     <Compile Include="Assets\Scripts\clickToSelect.cs" />
     <Compile Include="Assets\Scripts\menuPosition.cs" />
     <Compile Include="Assets\Scripts\xAxisRotate.cs" />

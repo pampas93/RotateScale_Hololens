@@ -151,6 +151,7 @@ namespace HoloToolkit.Unity.InputModule
 
         protected void OnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
         {
+            Debug.Log("Tap recognized");
             inputManager.RaiseInputClicked(this, 0, tapCount);
         }
 
