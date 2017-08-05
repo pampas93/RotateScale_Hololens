@@ -321,6 +321,7 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\VectorRollingStatistics.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\WorldAnchorManager.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Shaders\FastConfigurable\Scripts\CalibrationSpace.cs" />
+    <Compile Include="Assets\Scripts\BillsHandRotate.cs" />
     <Compile Include="Assets\Scripts\CreateReferencePoints.cs" />
     <Compile Include="Assets\Scripts\GameObjectManager.cs" />
     <Compile Include="Assets\Scripts\HandDragging.cs" />
@@ -328,11 +329,14 @@
     <Compile Include="Assets\Scripts\HandRotate.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Scene2\MoveOption.cs" />
+    <Compile Include="Assets\Scripts\Scene2\MoveScript.cs" />
     <Compile Include="Assets\Scripts\Scene2\ObjectManager.cs" />
     <Compile Include="Assets\Scripts\Scene2\ResetOption.cs" />
     <Compile Include="Assets\Scripts\Scene2\RotateOption.cs" />
+    <Compile Include="Assets\Scripts\Scene2\RotateScript.cs" />
     <Compile Include="Assets\Scripts\Scene2\ScaleOption.cs" />
-    <Compile Include="Assets\Scripts\TransformMenu.cs" />
+    <Compile Include="Assets\Scripts\Scene2\ScaleScript.cs" />
+    <Compile Include="Assets\Scripts\Scene2\TransformMenu.cs" />
     <Compile Include="Assets\Scripts\clickToSelect.cs" />
     <Compile Include="Assets\Scripts\menuPosition.cs" />
     <Compile Include="Assets\Scripts\xAxisRotate.cs" />

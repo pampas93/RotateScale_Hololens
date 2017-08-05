@@ -73,8 +73,7 @@ public class ObjectManager : MonoBehaviour {
             FocusedObject = null;
         }
 
-        // If the focused object changed this frame,
-        // start detecting fresh gestures again.
+        // If the focused object changed this frame, start detecting fresh gestures again.
         if (FocusedObject != oldFocusObject)
         {
             tapRecognizer.CancelGestures();
@@ -117,6 +116,9 @@ public class ObjectManager : MonoBehaviour {
             GameObject parentObj = obj.transform.parent.gameObject;
             obj.transform.parent = null;
             Destroy(parentObj);
+
+            //Hide Transform menu when deselected.
+            TransformMenu.instance.showMenu = false;
         }
     }
 
@@ -139,5 +141,16 @@ public class ObjectManager : MonoBehaviour {
 
         mesh.transform.SetParent(parentObj.transform);
 
+        AddTransformScripts(parentObj);                         //Add the Move, Scale and Rotate Script
+
+        //Show Transform menu when object selected
+        TransformMenu.instance.showMenu = true;
+    }
+
+    private void AddTransformScripts(GameObject parentObj)
+    {
+        parentObj.AddComponent<ScaleScript>();
+        parentObj.AddComponent<RotateScript>();
+        parentObj.AddComponent<MoveScript>();
     }
 }
