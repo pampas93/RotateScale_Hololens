@@ -18,7 +18,7 @@ public class ScaleScript : MonoBehaviour, IManipulationHandler {
 
     [Tooltip("Minimum resize scale allowed.")]
     [SerializeField]
-    float MinScale = 0.5f;
+    float MinScale = 0.2f;
 
     [Tooltip("Maximum resize scale allowed.")]
     [SerializeField]
@@ -77,5 +77,6 @@ public class ScaleScript : MonoBehaviour, IManipulationHandler {
         resizeZ = Mathf.Clamp(lastScale.z + resizeZ, MinScale, MaxScale);
 
         transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(resizeX, resizeY, resizeZ), ResizeSpeedFactor);
+
     }
 }

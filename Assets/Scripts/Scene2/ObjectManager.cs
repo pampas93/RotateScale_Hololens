@@ -38,7 +38,7 @@ public class ObjectManager : MonoBehaviour {
         {
             if(FocusedObject != null)
             {
-                JustToDebug.text = FocusedObject.name + " is clicked";
+                //JustToDebug.text = FocusedObject.name + " is clicked";
                 //Debug.Log(FocusedObject);
                 if(FocusedObject.tag != "TransformMenu")
                 {
@@ -81,7 +81,51 @@ public class ObjectManager : MonoBehaviour {
         }
 
         if (selectedGameObject != null)
+        {
             SelectedObjectDebug.text = "Currently selected: " + selectedGameObject.name;
+
+            //When SelectedGameObject is not null; we know it has a parent; So, we get the parent, getComponents of MSR and enable or disable
+
+            GameObject parent = selectedGameObject.transform.parent.gameObject;
+
+            var moveComponent = parent.GetComponent<MoveScript>();
+            var rotateComponent = parent.GetComponent<RotateScript>();
+            var scaleComponent = parent.GetComponent<ScaleScript>();
+
+            JustToDebug.text = TransformMenu.instance.currentMode.ToString();
+
+            switch (TransformMenu.instance.currentMode)
+            {
+                case TransformMenu.Mode.Move:
+                    moveComponent.SetDragging(true);
+                    rotateComponent.SetRotating(false);
+                    scaleComponent.SetResizing(false);
+                    break;
+                case TransformMenu.Mode.Rotate:
+                    rotateComponent.SetRotating(true);
+                    moveComponent.SetDragging(false);
+                    scaleComponent.SetResizing(false);
+                    break;
+                case TransformMenu.Mode.Scale:
+                    scaleComponent.SetResizing(true);
+                    moveComponent.SetDragging(false);
+                    rotateComponent.SetRotating(false);
+                    break;
+                case TransformMenu.Mode.Reset:
+                    Debug.Log("**************************Reset is enabled");
+                    TransformMenu.instance.currentMode = TransformMenu.Mode.None;
+                    //Call the reset function
+
+                    Debug.Log("Reset is Off~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    break;
+                default:
+                    scaleComponent.SetResizing(false);
+                    moveComponent.SetDragging(false);
+                    rotateComponent.SetRotating(false);
+                    //Debug.Log("Nothing is enabled");
+                    break;
+            }
+        }   
         else
             SelectedObjectDebug.text = "Currently selected: None";
     }
@@ -127,6 +171,7 @@ public class ObjectManager : MonoBehaviour {
         float gap = 0.15f;
         var parentObj = new GameObject();
         parentObj.name = "Parent Temporary Object";
+        parentObj.transform.position = obj.transform.position;
         obj.transform.SetParent(parentObj.transform);
 
         Vector3 center = obj.GetComponent<Renderer>().bounds.center;

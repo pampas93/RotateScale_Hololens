@@ -53,6 +53,7 @@ public class GameObjectManager : MonoBehaviour {
     {
         float gap = 0.25f;
         var parentObj = new GameObject();
+        parentObj.transform.position = obj.transform.position;
         parentObj.name = "Parent Temporary Object";
         obj.transform.SetParent(parentObj.transform);
 

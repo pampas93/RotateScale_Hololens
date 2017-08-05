@@ -336,6 +336,9 @@
     <Compile Include="Assets\Scripts\Scene2\RotateScript.cs" />
     <Compile Include="Assets\Scripts\Scene2\ScaleOption.cs" />
     <Compile Include="Assets\Scripts\Scene2\ScaleScript.cs" />
+    <Compile Include="Assets\Scripts\Scene2\Temporary Scripts\CheckTransforms.cs" />
+    <Compile Include="Assets\Scripts\Scene2\Temporary Scripts\TemporaryManager.cs" />
+    <Compile Include="Assets\Scripts\Scene2\Temporary Scripts\tempTap.cs" />
     <Compile Include="Assets\Scripts\Scene2\TransformMenu.cs" />
     <Compile Include="Assets\Scripts\clickToSelect.cs" />
     <Compile Include="Assets\Scripts\menuPosition.cs" />
