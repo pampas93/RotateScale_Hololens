@@ -1,4 +1,4 @@
 sceneSetups:
-- path: D:/Unity Projects/TestingHolo/Assets/scene1.unity
+- path: Assets/Scene2.unity
   isLoaded: 1
   isActive: 1
