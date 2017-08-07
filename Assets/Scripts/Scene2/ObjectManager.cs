@@ -12,6 +12,11 @@ public class ObjectManager : MonoBehaviour {
     private GameObject previousSelectedObject = null;
     GameObject FocusedObject = null;
 
+    //Below three vectors will hold the transform properties before changing (For reset purpose)
+    private Vector3 position;
+    private Vector3 scale;
+    private Quaternion rotation;
+
     GestureRecognizer tapRecognizer;
 
     [SerializeField]
@@ -161,6 +166,10 @@ public class ObjectManager : MonoBehaviour {
             obj.transform.parent = null;
             Destroy(parentObj);
 
+            position = Vector3.zero;
+            scale = Vector3.zero;
+            rotation = Quaternion.Euler(Vector3.zero);
+
             //Hide Transform menu when deselected.
             TransformMenu.instance.showMenu = false;
         }
@@ -188,6 +197,10 @@ public class ObjectManager : MonoBehaviour {
 
         AddTransformScripts(parentObj);                         //Add the Move, Scale and Rotate Script
 
+        position = parentObj.transform.position;
+        scale = parentObj.transform.localScale;
+        rotation = parentObj.transform.rotation;
+
         //Show Transform menu when object selected
         TransformMenu.instance.showMenu = true;
     }
@@ -197,5 +210,18 @@ public class ObjectManager : MonoBehaviour {
         parentObj.AddComponent<ScaleScript>();
         parentObj.AddComponent<RotateScript>();
         parentObj.AddComponent<MoveScript>();
+    }
+
+    public void ResetTransform()
+    {
+        if (selectedGameObject != null && position != Vector3.zero && scale != Vector3.zero)
+        {
+            GameObject parentObj = selectedGameObject.transform.parent.transform.gameObject;
+            parentObj.transform.localScale = scale;
+            parentObj.transform.localRotation = rotation;
+            parentObj.transform.position = position;
+
+            TransformMenu.instance.currentMode = TransformMenu.Mode.None;
+        }
     }
 }

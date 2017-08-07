@@ -40,49 +40,36 @@ public class TransformMenu : MonoBehaviour, IInputClickHandler {
             }
         }
 
-        //Checking th mode of transform
-        switch (currentMode)
-        {
-            case Mode.Move:
-                Debug.Log("Move is enabled");
-                break;
-            case Mode.Rotate:
-                Debug.Log("Rotate is enabled");
-                break;
-            case Mode.Scale:
-                Debug.Log("Scale is enabled");
-                break;
-            case Mode.Reset:
-                Debug.Log("**************************Reset is enabled");
-                currentMode = Mode.None;
-                //Call the reset function
-                Debug.Log("Reset is Off~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                break;
-            default:
-                //Debug.Log("Nothing is enabled");
-                break;
-        }
+        
+
+        ////Checking th mode of transform
+        //switch (currentMode)
+        //{
+        //    case Mode.Move:
+        //        Debug.Log("Move is enabled");
+        //        break;
+        //    case Mode.Rotate:
+        //        Debug.Log("Rotate is enabled");
+        //        break;
+        //    case Mode.Scale:
+        //        Debug.Log("Scale is enabled");
+        //        break;
+        //    case Mode.Reset:
+        //        Debug.Log("**************************Reset is enabled");
+        //        currentMode = Mode.None;
+        //        //Call the reset function
+        //        Debug.Log("Reset is Off~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        //        break;
+        //    default:
+        //        //Debug.Log("Nothing is enabled");
+        //        break;
+        //}
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
         showMenu = !showMenu;
-        //if (!showMenu)
-        //{
-        //    foreach(Transform child in transform)
-        //    {
-        //        child.gameObject.SetActive(true);
-        //    }
-        //    showMenu = true;
-        //}
-        //else
-        //{
-        //    //foreach(Transform child in transform)
-        //    //{
-        //    //    child.gameObject.SetActive(false);
-        //    //}
-        //    showMenu = false;
-        //}
+
     }
 
 }

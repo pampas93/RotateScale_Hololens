@@ -25,9 +25,30 @@ public class TemporaryManager : MonoBehaviour {
     [SerializeField]
     TextMesh SelectedObjectDebug;
 
+    //private Transform currentTransform;
+    //Below three vectors will hold the transform properties before changing (For reset purpose)
+    private Vector3 position;
+    private Vector3 scale;
+    private Quaternion rotation;
+
     private void Awake()
     {
         instance = this;
+    }
+
+    public void ResetTransform()
+    {
+        Debug.Log(selectedGameObject);
+        Debug.Log(position);
+        if (selectedGameObject != null && position != Vector3.zero && scale != Vector3.zero)
+        {
+            GameObject parentObj = selectedGameObject.transform.parent.transform.gameObject;
+            parentObj.transform.localScale = scale;
+            parentObj.transform.localRotation = rotation;
+            parentObj.transform.position = position;
+
+            TransformMenu.instance.currentMode = TransformMenu.Mode.None;
+        }
     }
 
     private void Start()
@@ -112,12 +133,15 @@ public class TemporaryManager : MonoBehaviour {
                     break;
                 case TransformMenu.Mode.Reset:
                     Debug.Log("**************************Reset is enabled");
-                    TransformMenu.instance.currentMode = TransformMenu.Mode.None;
+                    //TransformMenu.instance.currentMode = TransformMenu.Mode.None;
                     //Call the reset function
 
                     Debug.Log("Reset is Off~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     break;
                 default:
+                    scaleComponent.SetResizing(false);
+                    moveComponent.SetDragging(false);
+                    rotateComponent.SetRotating(false);
                     //Debug.Log("Nothing is enabled");
                     break;
             }
@@ -157,6 +181,13 @@ public class TemporaryManager : MonoBehaviour {
             obj.transform.parent = null;
             Destroy(parentObj);
 
+            position = Vector3.zero;
+            scale = Vector3.zero;
+            rotation = Quaternion.Euler(Vector3.zero);
+                
+
+            //currentTransform = null;
+
             //Hide Transform menu when deselected.
             TransformMenu.instance.showMenu = false;
         }
@@ -173,6 +204,9 @@ public class TemporaryManager : MonoBehaviour {
         Vector3 center = obj.GetComponent<Renderer>().bounds.center;
         Vector3 size = obj.GetComponent<Renderer>().bounds.size;
 
+        Debug.Log(center);
+        Debug.Log(size);
+
         GameObject mesh = GameObject.CreatePrimitive(PrimitiveType.Cube);
         mesh.name = "Outer Box";
         mesh.transform.position = center;
@@ -183,6 +217,11 @@ public class TemporaryManager : MonoBehaviour {
         mesh.transform.SetParent(parentObj.transform);
 
         AddTransformScripts(parentObj);                         //Add the Move, Scale and Rotate Script
+
+        position = parentObj.transform.position;
+        scale = parentObj.transform.localScale;
+        rotation = parentObj.transform.rotation;
+        //currentTransform = parentObj.transform;
 
         //Show Transform menu when object selected
         TransformMenu.instance.showMenu = true;
