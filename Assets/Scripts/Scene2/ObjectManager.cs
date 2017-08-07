@@ -183,8 +183,8 @@ public class ObjectManager : MonoBehaviour {
         parentObj.transform.position = obj.transform.position;
         obj.transform.SetParent(parentObj.transform);
 
-        Vector3 center = obj.GetComponent<Renderer>().bounds.center;
-        Vector3 size = obj.GetComponent<Renderer>().bounds.size;
+        Vector3 center = obj.GetComponent<Collider>().bounds.center;
+        Vector3 size = obj.GetComponent<Collider>().bounds.size;
 
         GameObject mesh = GameObject.CreatePrimitive(PrimitiveType.Cube);
         mesh.name = "Outer Box";
