@@ -345,6 +345,7 @@
     <Compile Include="Assets\Scripts\xAxisRotate.cs" />
     <Compile Include="Assets\Scripts\yAxisRotate.cs" />
     <Compile Include="Assets\Scripts\zAxisRotate.cs" />
+    <Compile Include="Assets\Temporary\InsertPrefab.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Buoy\Resources\DebugNormals.shader" />
