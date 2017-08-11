@@ -161,9 +161,9 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Shaders\FastConfigurable\Editor\ShaderGUIUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Buoy\Resources\DebugNormals.shader" />
-    <None Include="Assets\Buoy\Resources\Occlusion.shader" />
-    <None Include="Assets\Buoy\Resources\Wireframe.shader" />
+    <None Include="Assets\AssetStore Prefabs\Buoy\Resources\DebugNormals.shader" />
+    <None Include="Assets\AssetStore Prefabs\Buoy\Resources\Occlusion.shader" />
+    <None Include="Assets\AssetStore Prefabs\Buoy\Resources\Wireframe.shader" />
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />
     <None Include="Assets\HoloToolkit\Input\Shaders\CursorShader.shader" />
     <None Include="Assets\HoloToolkit\Input\Shaders\EditorHands.shader" />
