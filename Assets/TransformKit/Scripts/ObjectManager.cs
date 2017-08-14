@@ -25,12 +25,6 @@ public class ObjectManager : MonoBehaviour {
     [SerializeField]
     Material boxMaterial;
 
-    [SerializeField]
-    TextMesh JustToDebug;
-
-    [SerializeField]
-    TextMesh SelectedObjectDebug;
-
     private void Awake()
     {
         instance = this;
@@ -87,7 +81,6 @@ public class ObjectManager : MonoBehaviour {
 
         if (selectedGameObject != null)
         {
-            SelectedObjectDebug.text = "Currently selected: " + selectedGameObject.name;
 
             //When SelectedGameObject is not null; we know it has a parent; So, we get the parent, getComponents of MSR and enable or disable
 
@@ -96,8 +89,6 @@ public class ObjectManager : MonoBehaviour {
             var moveComponent = parent.GetComponent<MoveScript>();
             var rotateComponent = parent.GetComponent<RotateScript>();
             var scaleComponent = parent.GetComponent<ScaleScript>();
-
-            JustToDebug.text = TransformMenu.instance.currentMode.ToString();
 
             switch (TransformMenu.instance.currentMode)
             {
@@ -130,9 +121,11 @@ public class ObjectManager : MonoBehaviour {
                     //Debug.Log("Nothing is enabled");
                     break;
             }
-        }   
+        }
         else
-            SelectedObjectDebug.text = "Currently selected: None";
+        {
+            //Currently, no object is selected.
+        }
     }
 
     public void SetSelectedGameObject(GameObject obj)

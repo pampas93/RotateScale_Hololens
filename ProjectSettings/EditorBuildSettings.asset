@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 4215bce793e434246a7d581aca0d6433
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene2.unity
     guid: 35c9d809d0d7e014dab2af6ff5ce53db
+  - enabled: 1
+    path: Assets/UnityPackage/DemoScene.unity
+    guid: 84b611913430b5e4a954e807a84e030a
