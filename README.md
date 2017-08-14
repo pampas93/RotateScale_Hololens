@@ -8,6 +8,8 @@ Interactions include Move, Scale or Rotate the GameObject in real sapce. To incl
 
 Clone, and import TransformKit unity package onto your scene.
 
+Demo Video: https://www.youtube.com/watch?v=aHTmsz6jJ9I
+
 Steps to import,
 - Import the TransformKit package into your Hololens configured scene
 - Import the InputManager, HoloLensCamera, DefaultCursor from HoloToolkit into your scene
