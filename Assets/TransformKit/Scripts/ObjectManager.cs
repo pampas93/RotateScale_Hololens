@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using HoloToolkit.Unity.InputModule;
-using UnityEngine.VR.WSA.Input;
+
 
 public class ObjectManager : MonoBehaviour {
 
@@ -17,7 +17,7 @@ public class ObjectManager : MonoBehaviour {
     private Vector3 scale;
     private Quaternion rotation;
 
-    GestureRecognizer tapRecognizer;
+    UnityEngine.XR.WSA.Input.GestureRecognizer tapRecognizer;
 
     [SerializeField]
     bool AutoSelect = true;
@@ -32,7 +32,7 @@ public class ObjectManager : MonoBehaviour {
 
     private void Start()
     {
-        tapRecognizer = new GestureRecognizer();
+        tapRecognizer = new UnityEngine.XR.WSA.Input.GestureRecognizer();
         tapRecognizer.TappedEvent += (source, tapCount, ray) =>
         {
             if(FocusedObject != null)

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+
 
 public class TemporaryManager : MonoBehaviour {
 
@@ -11,7 +11,7 @@ public class TemporaryManager : MonoBehaviour {
     private GameObject previousSelectedObject = null;
     GameObject FocusedObject = null;
 
-    GestureRecognizer tapRecognizer;
+    UnityEngine.XR.WSA.Input.GestureRecognizer tapRecognizer;
 
     [SerializeField]
     bool AutoSelect = true;
@@ -53,7 +53,7 @@ public class TemporaryManager : MonoBehaviour {
 
     private void Start()
     {
-        tapRecognizer = new GestureRecognizer();
+        tapRecognizer = new UnityEngine.XR.WSA.Input.GestureRecognizer();
         tapRecognizer.TappedEvent += (source, tapCount, ray) =>
         {
             if (FocusedObject != null)
