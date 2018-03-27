@@ -141,6 +141,7 @@ public class ObjectManager : MonoBehaviour {
         if (selectedGameObject != previousSelectedObject)
         {
             CreateBox(selectedGameObject);
+            MoveMenu(selectedGameObject);
         }
         else
         {
@@ -149,6 +150,18 @@ public class ObjectManager : MonoBehaviour {
             previousSelectedObject = null;
         }
 
+    }
+
+    private void MoveMenu(GameObject obj)
+    {
+        // calcul du rayon d'une sphere danbs lequel l'objet peut tourner sans toucher le menu.
+        Vector3 center = obj.GetComponent<Collider>().bounds.center;
+        Vector3 size = obj.GetComponent<Collider>().bounds.size;
+
+        // positionnement du menu à une distance de size.magnitude vers le bas
+
+        TransformMenu.instance.gameObject.transform.parent = obj.transform;
+        TransformMenu.instance.gameObject.transform.localPosition = new Vector3(0, -size.magnitude + 0.15f, -size.magnitude + 0.15f);
     }
 
     private void RemoveBox(GameObject obj)

@@ -1,2 +1,8 @@
 Temp/
 App/*
+Library/
+.vs/
+RotateScale.csproj
+RotateScale.Editor.csproj
+RotateScale.sln
+RotateScale.Player.csproj
