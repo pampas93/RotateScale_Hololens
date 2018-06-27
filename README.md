@@ -1,5 +1,6 @@
 # Transform Kit Hololens
 
+#### [DEPRECATED]
 
 Unity 5.6.1 + HoloToolkit
 
