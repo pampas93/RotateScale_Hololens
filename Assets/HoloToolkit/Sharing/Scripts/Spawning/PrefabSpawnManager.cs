@@ -1,7 +1,5 @@
-//
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
-//
 
 using System;
 using System.Collections.Generic;
@@ -42,8 +40,10 @@ namespace HoloToolkit.Sharing.Spawning
         /// </summary>
         private int objectCreationCounter;
 
-        private void Awake()
+        protected override void Start()
         {
+            base.Start();
+
             InitializePrefabs();
         }
 
@@ -223,7 +223,7 @@ namespace HoloToolkit.Sharing.Spawning
 
             dataModel.GameObject = instance;
 
-            // Set the data model on the various ISyncModelAccessor components of the spawned game obejct
+            // Set the data model on the various ISyncModelAccessor components of the spawned GameObject
             ISyncModelAccessor[] syncModelAccessors = instance.GetComponentsInChildren<ISyncModelAccessor>(true);
             if (syncModelAccessors.Length <= 0)
             {
